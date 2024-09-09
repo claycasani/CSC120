@@ -1,0 +1,14 @@
+1. Get data
+    1.1  Prompt for length of the side of the square of land (in km)
+    1.2  Prompt for the length of roads running through the square (in km)
+    1.3  Prompt for the number of kangaroos living in that square
+
+2. Perform computations
+    2.1  Area is the length of the side of the square of land squared
+    2.2  Kangaroo density is number of kangaroos divided by area
+    2.3  Surface area is road length multiplied by the average road width
+    2.4  Number of deaths as a decimal is surface area multiplied by the kangaroo density and the roadkill constant
+    2.5  The number of expected deaths is the number of deaths decimal as an integer
+    2.6  The number of expected injuries is the 1 if the death decimal subtracted by the number of expected deaths si greater than 0
+
+3. Display the number of expected deaths and expected injuries

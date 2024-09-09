@@ -1,0 +1,15 @@
+	1.	Get data:
+	•	1.1 Ask the user for the depth of the dive.
+	•	1.2 Ask the user for the percentage of oxygen in the gas mixture.
+	2.	Perform computations:
+	•	2.1 Compute the ambient pressure based on the depth of the dive and standard atmospheric conditions.
+	•	2.2 Compute the partial pressure of oxygen, which is the proportion of oxygen in the gas mixture multiplied by the ambient pressure.
+	•	2.3 Determine the oxygen pressure group, a letter from ‘A’ onwards that represents the range of partial oxygen pressure.
+	•	2.4 Check if the partial pressure of oxygen exceeds the maximal recommended safe level.
+	•	2.5 Check if the partial pressure of oxygen exceeds a higher contingency level, used for safety considerations.
+	3.	Display results:
+	•	3.1 Show the calculated ambient pressure.
+	•	3.2 Show the calculated partial pressure of oxygen.
+	•	3.3 Show the determined oxygen pressure group.
+	•	3.4 Indicate whether the partial pressure exceeds the maximal safe level.
+	•	3.5 Indicate whether the partial pressure exceeds the contingency safety level.
