@@ -1,24 +1,25 @@
 import java.util.Scanner;
 
 public class TaxTime {
-    private static Scanner scanner = new Scanner(System.in);
+    private static Scanner keyboard = new Scanner(System.in);
 
-// Constants
+// Tax rate constants
     private static final double S_Q_TAX_RATE = 0.25;
     private static final double M_TAX_RATE = 0.10;
     private static final double A_R_TAX_RATE = 0.3;
 
     public static void main(String[] args) {
 
-        double income = 0;
-        double deduction = 0;
-        double taxableIncome, taxOwed = 0;
+// Variables to hold system values
+        double income = 0.0;
+        double deduction = 0.0;
+        double taxableIncome, taxOwed = 0.0;
         int value;
         char taxGroup;
 
 // Gather income and deduction values
         System.out.print("Enter next amount: ");
-        value = scanner.nextInt();
+        value = keyboard.nextInt();
         while (value != 0) {
             if (value > 0) {
                 income += value;
@@ -26,7 +27,7 @@ public class TaxTime {
                 deduction += Math.abs(value);
             }
             System.out.print("Enter next amount: ");
-            value = scanner.nextInt();
+            value = keyboard.nextInt();
         }
 
 // Calculate taxable income
@@ -58,7 +59,6 @@ public class TaxTime {
         }
 
 // Calculate tax owed
-
         switch (taxGroup) {
             case 'S':
                 taxOwed = taxableIncome * S_Q_TAX_RATE;
@@ -82,14 +82,15 @@ public class TaxTime {
                 System.out.println("Error!");
         }
 
+// Line break for output
        System.out.println();
 
 // Display tax information
-        System.out.printf("Income = $%.1f\n", income);
-        System.out.printf("Deductions = $%.1f\n", deduction);
+        System.out.printf("Income         = $%.1f\n", income);
+        System.out.printf("Deductions     = $%.1f\n", deduction);
         System.out.printf("Taxable income = $%.1f\n", taxableIncome);
-        System.out.println("Tax group = " + taxGroup);
-        System.out.printf("Tax owed = $%.1f\n", taxOwed);
+        System.out.println("Tax group      = " + taxGroup);
+        System.out.printf("Tax owed       = $%.1f\n", taxOwed);
 
     }
 }
