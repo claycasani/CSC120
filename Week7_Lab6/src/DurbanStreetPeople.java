@@ -12,7 +12,7 @@ public class DurbanStreetPeople {
     public static void main(String[] args) {
 
 //  Variables to hold system values
-        int numHouses, numPeople, index, store, totalStreetAge, houseNumber, totalHouseAge;
+        int numHouses, numPeople, rowIndex, colIndex, totalStreetAge, houseNumber, totalHouseAge;
 
 //  Gather number of houses on street and assign to numHouses.
         System.out.print("How many houses on the street? :  ");
@@ -23,31 +23,31 @@ public class DurbanStreetPeople {
         int[][]  streetData = new int[numHouses][11];
 
 // Gather the house numbers and assign to first column of each row.
-        for (index = 0; index < numHouses; index++) {
+        for (rowIndex = 0; rowIndex < numHouses; rowIndex++) {
             System.out.print("What is the next house number? :  ");
-            streetData[index][0] = keyboard.nextInt();
+            streetData[rowIndex][0] = keyboard.nextInt();
         }
 // Gather the number of people who live in each house and assign to numPeople.
-        for (index = 0; index < numHouses; index++) {
-            System.out.print("How many people live in number " + streetData[index][0] + "? :  ");
+        for (rowIndex = 0; rowIndex < numHouses; rowIndex++) {
+            System.out.print("How many people live in number " + streetData[rowIndex][0] + "? :  ");
             numPeople = keyboard.nextInt();
 
 // Gather the ages of each person in each house.
-            for (store = 0; store < numPeople; store++) {
-                System.out.print("What is age of person " + (store + 1) + "? :  ");
-                streetData[index][store + 1] = keyboard.nextInt();
+            for (colIndex = 0; colIndex < numPeople; colIndex++) {
+                System.out.print("What is age of person " + (colIndex + 1) + "? :  ");
+                streetData[rowIndex][colIndex + 1] = keyboard.nextInt();
             }
         }
 
         totalStreetAge = 0;
 
 //  Sum ages of all people living in each house and display. Sum of ages of all houses to find total street age.
-        for (index = 0; index < numHouses; index++) {
+        for (rowIndex = 0; rowIndex < numHouses; rowIndex++) {
             totalHouseAge = 0;
-            houseNumber = streetData[index][0];
+            houseNumber = streetData[rowIndex][0];
 
-            for (store = 1; store < 11; store++) {
-                totalHouseAge += streetData[index][store];
+            for (colIndex = 1; colIndex < 11; colIndex++) {
+                totalHouseAge += streetData[rowIndex][colIndex];
             }
             totalStreetAge += totalHouseAge;
             System.out.println("House " + houseNumber + " has a total age of " + totalHouseAge);
