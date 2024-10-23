@@ -50,5 +50,5 @@ public class ThereforeIAm {
                 sentenceList.add(sentence);
             }
         }
-    }
-}
+    } 
+} // End of class
