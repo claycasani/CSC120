@@ -307,4 +307,4 @@ public class DentalRecords {
             System.out.printf("Another root canal at %.2f\n", root2);
         }
     } //  End of reportRootCanalIndices method.
-}
+} // End of java class.
