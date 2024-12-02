@@ -1,0 +1,74 @@
+1. Problem Description
+----------------------
+The problem is to manage a fleet of boats. The program should be able to load boat data from a CSV file or a database file, allow the user to add, remove, and update boat information, and save the updated data back to the database file. The program should also provide a report of the fleet, including the total amount paid and spent on the boats.
+
+2. Information Provided
+------------------------
+- Input Data:
+  - CSV file containing boat details (type, name, year, make/model, length, purchase price)
+  - Database file containing serialized boat objects
+  - User input for adding, removing, and updating boat information
+
+- Input Data Format:
+  - CSV file: Each line contains comma-separated values representing a boat's details
+  - Database file: Serialized ArrayList of Boat objects
+  - User input: Text input via the console
+
+- Expected Results:
+  - Output Data:
+    - Fleet report displaying each boat's details and the total amount paid and spent
+    - Confirmation messages for adding, removing, and updating boat information
+    - Error messages for invalid input or operations
+
+- Output Data Format:
+  - Console output for fleet report and messages
+
+3. Handling Data Entry Errors
+------------------------------
+- Validate CSV file format and content
+- Validate user input for adding, removing, and updating boat information
+- Display error messages for invalid input or operations
+
+4. Assumptions
+---------------
+- The CSV file contains valid data with the correct number of fields
+- The database file is accessible and contains valid serialized data
+- User input is provided in the expected format
+
+5. Structuring/Recording Solution Information
+----------------------------------------------
+- Information to be recorded:
+  - Boat details (type, name, year, make/model, length, purchase price, expenses)
+  - Fleet data (ArrayList of Boat objects)
+
+- Quantity of Information:
+  - Variable number of boats in the fleet
+
+6. User Interaction
+--------------------
+- User interface: Console-based interaction
+- User actions:
+  - Load fleet data from a CSV file or database file
+  - Add a new boat to the fleet
+  - Remove a boat from the fleet
+  - Add an expense to a boat
+  - Print the fleet report
+  - Save the fleet data to the database file
+  - Exit the program
+
+7. Top-down Analysis
+---------------------
+- Overall Problem: Manage a fleet of boats
+  - Subproblem 1: Load fleet data
+    - Subsubproblem 1.1: Load data from a CSV file
+    - Subsubproblem 1.2: Load data from a database file
+  - Subproblem 2: Save fleet data
+    - Subsubproblem 2.1: Save data to a database file
+  - Subproblem 3: Manage fleet
+    - Subsubproblem 3.1: Add a new boat
+    - Subsubproblem 3.2: Remove a boat
+    - Subsubproblem 3.3: Add an expense to a boat
+    - Subsubproblem 3.4: Print the fleet report
+  - Subproblem 4: User interaction
+    - Subsubproblem 4.1: Display menu options
+    - Subsubproblem 4.2: Handle user input and actions

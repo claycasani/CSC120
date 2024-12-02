@@ -1,0 +1,42 @@
+1. Load fleet data
+    1.1 If CSV file provided
+        1.1.1 Open and read CSV file
+        1.1.2 Parse each line to create Boat objects
+        1.1.3 Add Boat objects to fleet
+    1.2 Else
+        1.2.1 Open and read database file
+        1.2.2 Deserialize data to get fleet
+
+2. User interaction
+    2.1 Display menu options
+    2.2 Get user input for menu option
+    2.3 Perform action based on menu option
+        2.3.1 If print, call display fleet report
+        2.3.2 If add, call add a new boat
+        2.3.3 If remove, call remove a boat
+        2.3.4 If expense, call add an expense to a boat
+        2.3.5 If exit, call save fleet data and exit program
+
+3. Manage fleet
+    3.1 Add a new boat
+        3.1.1 Get boat details from user input
+        3.1.2 Parse input to create Boat object
+        3.1.3 Add Boat object to fleet
+    3.2 Remove a boat
+        3.2.1 Get boat name from user input
+        3.2.2 Find boat in fleet
+        3.2.3 Remove boat from fleet if found
+    3.3 Add an expense to a boat
+        3.3.1 Get boat name from user input
+        3.3.2 Find boat in fleet
+        3.3.3 Get expense amount from user input
+        3.3.4 Add expense to boat if within allowed limit
+
+4. Display fleet report
+    4.1 Loop through each boat in fleet
+    4.2 Print boat details
+    4.3 Calculate and print total amount paid and spent
+
+5. Save fleet data
+    5.1 Open and write to database file
+    5.2 Serialize fleet data to file
